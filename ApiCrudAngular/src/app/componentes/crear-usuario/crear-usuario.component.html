@@ -1,0 +1,26 @@
+
+
+<form (ngSubmit)="enviarUsuario()" class="formulario" id="formulario">
+  <div class="row">
+    <h2 style="text-align: center;">Crear Usuario</h2>
+    <div class="card-body">
+      <div class="form-group">
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input id="nombre" class="form-control mt-2 mb-3" type="text" [(ngModel)]="user.nombre" name="nombre" placeholder="Nombre">
+      </div>
+      <div class="form-group">
+        <label for="enail" class="form-label">Correo:</label>
+        <input id="email" class="form-control mt-2 mb-3" type="text" [(ngModel)]="user.correo" name="correo" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="Telefono" class="form-label">Telefono:</label>
+        <input id="Telefono" class="form-control mt-2 mb-3" type="text" [(ngModel)]="user.telefono" name="telefono" placeholder="Telefono">
+      </div>
+      <button id="aceptar" class="btn btn-primary mt-3 " type="submit">Crear</button>
+
+      <button type="submit" class="btn btn-danger ms-4 mt-3" id="rechazar" routerLink="/listaUsuario">Cancelar</button>
+    </div>
+  </div>
+</form>
+
+

@@ -1,0 +1,28 @@
+.indice{
+    color: black;
+    text-shadow: -1px -1px 1px #17e0ff, 1px 1px 1px #17e0ff ;
+}
+
+#formulario{
+    color: white;
+    margin-top: 10%;
+    margin-left: 14%;
+    margin-right: 14%;
+    padding: 3em;
+    border-radius: 1%;
+    background: linear-gradient(90deg, rgba(3,0,60,1) 27%, rgba(0,13,121,1) 68%, rgba(0,48,94,1) 99%);
+    box-shadow: 5px 4px 2px rgb(5, 57, 170);
+}
+
+#lista{
+    box-shadow: 1px 1px 1px rgb(0, 41, 129), -1px -1px 1px rgb(0, 41, 129);
+}
+
+#aceptar:hover{
+    background-color: #0023b1dd;
+}
+
+#rechazar:hover{
+    background-color: rgba(255, 0, 0, 0.582);
+}
+

@@ -1,0 +1,30 @@
+
+  <form [formGroup]="usuarioForm" (ngSubmit)="editarUsuario()"  id="formulario">
+  <h2 style="text-align: center;" >Editar Usuario</h2>
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" class="form-control" formControlName="nombre" placeholder="Nombre">
+      <div *ngIf="usuarioForm.get('nombre')?.invalid && (usuarioForm.get('nombre')?.touched || usuarioForm.get('nombre')?.dirty)">
+        <small class="text-danger">El nombre es requerido.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="correo">Correo Electrónico</label>
+      <input type="email" id="correo" class="form-control" formControlName="correo" placeholder="Correo Electrónico" > 
+      <div *ngIf="usuarioForm.get('correo')?.invalid && (usuarioForm.get('correo')?.touched || usuarioForm.get('correo')?.dirty)">
+        <small class="text-danger">Por favor, ingrese un correo electrónico válido.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="telefono">Teléfono</label>
+      <input type="text" id="telefono" class="form-control" formControlName="telefono" placeholder="Teléfono">
+      <div *ngIf="usuarioForm.get('telefono')?.invalid && (usuarioForm.get('telefono')?.touched || usuarioForm.get('telefono')?.dirty)">
+        <small class="text-danger">El teléfono es requerido.</small>
+      </div>
+    </div>
+
+    <button id="aceptar" type="submit" class="btn btn-primary mt-3 " [disabled]="usuarioForm.invalid">Actualizar Usuario</button>
+    <button id="rechazar"  type="button" class="btn btn-danger ms-4 mt-3" (click)="cancelar()">Cancelar</button>
+  </form>

@@ -1,0 +1,12 @@
+.centrar{
+    margin-top: 5%;
+    margin-left: 35%;
+}
+
+.imagen-inicio{
+    height: 500px;
+    aspect-ratio: 1.75/2;
+    border-radius: 25%;
+    filter: drop-shadow(25px 25px 4px aqua);
+ 
+}

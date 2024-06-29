@@ -1,0 +1,29 @@
+<h2 style="margin-left: 2%;">Lista de Usuarios</h2>
+
+
+  <button class="button" routerLink="/usuarioCrear">Crear Usuario</button>
+  <table  id="lista">
+
+      <thead>
+        <tr id="columna" >
+          <th style="border: solid 1px black; " scope="col">Indice</th>
+          <th style="border: solid 1px black; " scope="col">Nombre</th>
+          <th style="border: solid 1px black; " scope="col">Correo</th>
+          <th style="border: solid 1px black; " scope="col">Telefono</th>
+          <th style="border: solid 1px black; " colspan="2" scope="col"> Acciones </th>
+        </tr>
+      </thead>
+      <tbody style="border: solid 1px black; ">
+        <tr *ngFor="let user of usuarios">
+          <td id="valor" scope="row">{{this.cont}}</td>
+          <td id="valor">{{ user.nombre }}</td>
+          <td id="valor">{{ user.correo }}</td>
+          <td id="valor">{{ user.telefono }}</td>
+          <td><button  class="btn btn-success ms-2 mt-3" id="EditarBoton" style="filter:drop-shadow(5px 5px 3px aqua); margin-right: 3em;" [routerLink]="['/UsuarioEditar', user.id]">Editar</button>
+
+          <button  class="btn btn-danger ms-2 mt-3" id="rechazar" style="filter:drop-shadow(5px 5px 3px aqua);" (click)="deleteUser(user.id)">Eliminar</button></td>
+
+        </tr>
+      </tbody>
+
+  </table>
